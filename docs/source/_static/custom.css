@@ -1,0 +1,41 @@
+/* Change TOC font */
+/*.bd-sidebar .sidebar-item, /* for sphinx-book-theme */
+.toctree-l1,
+.toctree-l2,
+.toctree-l3 {
+    font-family: "Arial", sans-serif;
+    font-size: 20px;
+}
+
+/* Adjust vertical spacing (margin between items) */
+.toctree-l1 {
+    /* font-family: "Arial", sans-serif;
+    font-size: 18px; */
+    margin-top: 0px;
+    /* margin-bottom: -10px; */
+}
+
+/* .toctree-l2 {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+} */
+
+.toctree-l2:first-child {
+    /* margin-top: 10px; */
+    margin-bottom: -10px;
+}
+
+/* Adjust indent spacing for nested items */
+.toctree-l2:not(:first-child):not(:last-child) {
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.toctree-l2:last-child {
+    margin-top: 10px;
+    /* margin-bottom: -10px; */
+}
+
+/* .toctree-l3:not(:last-child) {
+    margin-bottom: -10px;
+} */
