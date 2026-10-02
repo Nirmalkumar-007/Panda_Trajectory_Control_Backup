@@ -1,6 +1,0 @@
-[console_scripts]
-PandaCmdSub = app.run_PandaCmdSub:main
-PandaTrajectoryNode = app.run_PandaTrajectory:main
-PandaTrapNode = app.run_PandaTrap:main
-test_PandaCmdSub = test.test_pandaCmdSub:test_pandacmdsub
-test_PandaTrajectoryNode = test.test_PandaTrajectory:test_pandatrajectory
