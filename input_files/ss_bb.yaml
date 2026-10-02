@@ -1,0 +1,358 @@
+safety:
+  require_home_on_start: true
+  max_joint_error_rad: 0.05
+motion:
+  default_segment_duration_s: 15.0
+  default_s_ddot_max: 0.1
+  default_control_rate_hz: 100.0
+stiffness:
+  translational_x: 1500.0
+  translational_y: 1500.0
+  translational_z: 1000.0
+  rotational_x: 30.0
+  rotational_y: 30.0
+  rotational_z: 30.0
+  damping_ratio: 1.0
+  nullspace_stiffness: 1.0
+orientation:
+  tilt_sideways_deg: -10
+  tilt_forward_deg: 7
+waypoints:
+  - name: HOME  # 0
+    offset: [0.0, 0.0, 0.0]
+
+  # REGION 1 - 5 vertical strokes (Y: 0.07 to 0.11, 4cm height)
+  - name: A1  # 1
+    offset: [0.30, -0.07, -0.42]
+    segment_duration_s: 10.0
+  - name: A2  # 2
+    offset: [0.30, 0.11, -0.42]
+    segment_duration_s: 8.0
+  - name: A1  # 3
+    offset: [0.30, 0.07, -0.42]
+    segment_duration_s: 2.0
+  - name: B1  # 4
+    offset: [0.28, 0.07, -0.42]
+    segment_duration_s: 2.0
+  - name: B2  # 5
+    offset: [0.28, 0.11, -0.42]
+    segment_duration_s: 2.0
+  - name: B1  # 6
+    offset: [0.28, 0.07, -0.42]
+    segment_duration_s: 2.0
+  - name: C1  # 7
+    offset: [0.26, 0.07, -0.42]
+    segment_duration_s: 2.0
+  - name: C2  # 8
+    offset: [0.26, 0.11, -0.42]
+    segment_duration_s: 2.0
+  - name: C1  # 9
+    offset: [0.26, 0.07, -0.42]
+    segment_duration_s: 2.0
+  - name: D1  # 10
+    offset: [0.24, 0.07, -0.42]
+    segment_duration_s: 2.0
+  - name: D2  # 11
+    offset: [0.24, 0.11, -0.42]
+    segment_duration_s: 2.0
+  - name: D1  # 12
+    offset: [0.24, 0.07, -0.42]
+    segment_duration_s: 2.0
+  - name: E1  # 13
+    offset: [0.22, 0.07, -0.42]
+    segment_duration_s: 2.0
+  - name: E2  # 14
+    offset: [0.22, 0.11, -0.42]
+    segment_duration_s: 2.0
+  - name: E1  # 15
+    offset: [0.22, 0.07, -0.42]
+    segment_duration_s: 2.0
+
+  # REGION 2 - 5 vertical strokes (Y: 0.11 to 0.15, 4cm height)
+  - name: F1  # 16
+    offset: [0.30, 0.11, -0.42]
+    segment_duration_s: 2.0
+  - name: F2  # 17
+    offset: [0.30, 0.15, -0.42]
+    segment_duration_s: 2.0
+  - name: F1  # 18
+    offset: [0.30, 0.11, -0.42]
+    segment_duration_s: 2.0
+  - name: G1  # 19
+    offset: [0.28, 0.11, -0.42]
+    segment_duration_s: 2.0
+  - name: G2  # 20
+    offset: [0.28, 0.15, -0.42]
+    segment_duration_s: 2.0
+  - name: G1  # 21
+    offset: [0.28, 0.11, -0.42]
+    segment_duration_s: 2.0
+  - name: H1  # 22
+    offset: [0.26, 0.11, -0.42]
+    segment_duration_s: 2.0
+  - name: H2  # 23
+    offset: [0.26, 0.15, -0.42]
+    segment_duration_s: 2.0
+  - name: H1  # 24
+    offset: [0.26, 0.11, -0.42]
+    segment_duration_s: 2.0
+  - name: I1  # 25
+    offset: [0.24, 0.11, -0.42]
+    segment_duration_s: 2.0
+  - name: I2  # 26
+    offset: [0.24, 0.15, -0.42]
+    segment_duration_s: 2.0
+  - name: I1  # 27
+    offset: [0.24, 0.11, -0.42]
+    segment_duration_s: 2.0
+  - name: J1  # 28
+    offset: [0.22, 0.11, -0.42]
+    segment_duration_s: 2.0
+  - name: J2  # 29
+    offset: [0.22, 0.15, -0.42]
+    segment_duration_s: 2.0
+  - name: J1  # 30
+    offset: [0.22, 0.11, -0.42]
+    segment_duration_s: 2.0
+
+  # REGION 3 - 5 vertical strokes (Y: 0.15 to 0.19, 4cm height)
+  - name: K1  # 31
+    offset: [0.30, 0.15, -0.42]
+    segment_duration_s: 2.0
+  - name: K2  # 32
+    offset: [0.30, 0.19, -0.42]
+    segment_duration_s: 2.0
+  - name: K1  # 33
+    offset: [0.30, 0.15, -0.42]
+    segment_duration_s: 2.0
+  - name: L1  # 34
+    offset: [0.28, 0.15, -0.42]
+    segment_duration_s: 2.0
+  - name: L2  # 35
+    offset: [0.28, 0.19, -0.42]
+    segment_duration_s: 2.0
+  - name: L1  # 36
+    offset: [0.28, 0.15, -0.42]
+    segment_duration_s: 2.0
+  - name: M1  # 37
+    offset: [0.26, 0.15, -0.42]
+    segment_duration_s: 2.0
+  - name: M2  # 38
+    offset: [0.26, 0.19, -0.42]
+    segment_duration_s: 2.0
+  - name: M1  # 39
+    offset: [0.26, 0.15, -0.42]
+    segment_duration_s: 2.0
+  - name: N1  # 40
+    offset: [0.24, 0.15, -0.42]
+    segment_duration_s: 2.0
+  - name: N2  # 41
+    offset: [0.24, 0.19, -0.42]
+    segment_duration_s: 2.0
+  - name: N1  # 42
+    offset: [0.24, 0.15, -0.42]
+    segment_duration_s: 2.0
+  - name: O1  # 43
+    offset: [0.22, 0.15, -0.42]
+    segment_duration_s: 2.0
+  - name: O2  # 44
+    offset: [0.22, 0.19, -0.42]
+    segment_duration_s: 2.0
+  - name: O1  # 45
+    offset: [0.22, 0.15, -0.42]
+    segment_duration_s: 2.0
+
+  # REGION 4 - 5 vertical strokes (Y: 0.19 to 0.23, 4cm height)
+  - name: P1  # 46
+    offset: [0.30, 0.19, -0.42]
+    segment_duration_s: 2.0
+  - name: P2  # 47
+    offset: [0.30, 0.23, -0.42]
+    segment_duration_s: 2.0
+  - name: P1  # 48
+    offset: [0.30, 0.19, -0.42]
+    segment_duration_s: 2.0
+  - name: Q1  # 49
+    offset: [0.28, 0.19, -0.42]
+    segment_duration_s: 2.0
+  - name: Q2  # 50
+    offset: [0.28, 0.23, -0.42]
+    segment_duration_s: 2.0
+  - name: Q1  # 51
+    offset: [0.28, 0.19, -0.42]
+    segment_duration_s: 2.0
+  - name: R1  # 52
+    offset: [0.26, 0.19, -0.42]
+    segment_duration_s: 2.0
+  - name: R2  # 53
+    offset: [0.26, 0.23, -0.42]
+    segment_duration_s: 2.0
+  - name: R1  # 54
+    offset: [0.26, 0.19, -0.42]
+    segment_duration_s: 2.0
+  - name: S1  # 55
+    offset: [0.24, 0.19, -0.42]
+    segment_duration_s: 2.0
+  - name: S2  # 56
+    offset: [0.24, 0.23, -0.42]
+    segment_duration_s: 2.0
+  - name: S1  # 57
+    offset: [0.24, 0.19, -0.42]
+    segment_duration_s: 2.0
+  - name: T1  # 58
+    offset: [0.22, 0.19, -0.42]
+    segment_duration_s: 2.0
+  - name: T2  # 59
+    offset: [0.22, 0.23, -0.42]
+    segment_duration_s: 2.0
+  - name: T1  # 60
+    offset: [0.22, 0.19, -0.42]
+    segment_duration_s: 2.0
+
+  # REGION 5 - 5 vertical strokes (Y: 0.23 to 0.27, 4cm height)
+  - name: U1  # 61
+    offset: [0.30, 0.23, -0.42]
+    segment_duration_s: 2.0
+  - name: U2  # 62
+    offset: [0.30, 0.27, -0.42]
+    segment_duration_s: 2.0
+  - name: U1  # 63
+    offset: [0.30, 0.23, -0.42]
+    segment_duration_s: 2.0
+  - name: V1  # 64
+    offset: [0.28, 0.23, -0.42]
+    segment_duration_s: 2.0
+  - name: V2  # 65
+    offset: [0.28, 0.27, -0.42]
+    segment_duration_s: 2.0
+  - name: V1  # 66
+    offset: [0.28, 0.23, -0.42]
+    segment_duration_s: 2.0
+  - name: W1  # 67
+    offset: [0.26, 0.23, -0.42]
+    segment_duration_s: 2.0
+  - name: W2  # 68
+    offset: [0.26, 0.27, -0.42]
+    segment_duration_s: 2.0
+  - name: W1  # 69
+    offset: [0.26, 0.23, -0.42]
+    segment_duration_s: 2.0
+  - name: X1  # 70
+    offset: [0.24, 0.23, -0.42]
+    segment_duration_s: 2.0
+  - name: X2  # 71
+    offset: [0.24, 0.27, -0.42]
+    segment_duration_s: 2.0
+  - name: X1  # 72
+    offset: [0.24, 0.23, -0.42]
+    segment_duration_s: 2.0
+  - name: Y1  # 73
+    offset: [0.22, 0.23, -0.42]
+    segment_duration_s: 2.0
+  - name: Y2  # 74
+    offset: [0.22, 0.27, -0.42]
+    segment_duration_s: 2.0
+  - name: Y1  # 75
+    offset: [0.22, 0.23, -0.42]
+    segment_duration_s: 2.0
+
+  # REGION 6 - 5 vertical strokes (Y: 0.27 to 0.31, 4cm height)
+  - name: Z1  # 76
+    offset: [0.30, 0.27, -0.42]
+    segment_duration_s: 2.0
+  - name: Z2  # 77
+    offset: [0.30, 0.31, -0.42]
+    segment_duration_s: 2.0
+  - name: Z1  # 78
+    offset: [0.30, 0.27, -0.42]
+    segment_duration_s: 2.0
+  - name: AA1  # 79
+    offset: [0.28, 0.27, -0.42]
+    segment_duration_s: 2.0
+  - name: AA2  # 80
+    offset: [0.28, 0.31, -0.42]
+    segment_duration_s: 2.0
+  - name: AA1  # 81
+    offset: [0.28, 0.27, -0.42]
+    segment_duration_s: 2.0
+  - name: AB1  # 82
+    offset: [0.26, 0.27, -0.42]
+    segment_duration_s: 2.0
+  - name: AB2  # 83
+    offset: [0.26, 0.31, -0.42]
+    segment_duration_s: 2.0
+  - name: AB1  # 84
+    offset: [0.26, 0.27, -0.42]
+    segment_duration_s: 2.0
+  - name: AC1  # 85
+    offset: [0.24, 0.27, -0.42]
+    segment_duration_s: 2.0
+  - name: AC2  # 86
+    offset: [0.24, 0.31, -0.42]
+    segment_duration_s: 2.0
+  - name: AC1  # 87
+    offset: [0.24, 0.27, -0.42]
+    segment_duration_s: 2.0
+  - name: AD1  # 88
+    offset: [0.22, 0.27, -0.42]
+    segment_duration_s: 2.0
+  - name: AD2  # 89
+    offset: [0.22, 0.31, -0.42]
+    segment_duration_s: 2.0
+  - name: AD1  # 90
+    offset: [0.22, 0.27, -0.42]
+    segment_duration_s: 2.0
+
+  # REGION 7 - 5 vertical strokes (Y: 0.31 to 0.35, 4cm height)
+  - name: AE1  # 91
+    offset: [0.30, 0.31, -0.42]
+    segment_duration_s: 2.0
+  - name: AE2  # 92
+    offset: [0.30, 0.35, -0.42]
+    segment_duration_s: 2.0
+  - name: AE1  # 93
+    offset: [0.30, 0.31, -0.42]
+    segment_duration_s: 2.0
+  - name: AF1  # 94
+    offset: [0.28, 0.31, -0.42]
+    segment_duration_s: 2.0
+  - name: AF2  # 95
+    offset: [0.28, 0.35, -0.42]
+    segment_duration_s: 2.0
+  - name: AF1  # 96
+    offset: [0.28, 0.31, -0.42]
+    segment_duration_s: 2.0
+  - name: AG1  # 97
+    offset: [0.26, 0.31, -0.42]
+    segment_duration_s: 2.0
+  - name: AG2  # 98
+    offset: [0.26, 0.35, -0.42]
+    segment_duration_s: 2.0
+  - name: AG1  # 99
+    offset: [0.26, 0.31, -0.42]
+    segment_duration_s: 2.0
+  - name: AH1  # 100
+    offset: [0.24, 0.31, -0.42]
+    segment_duration_s: 2.0
+  - name: AH2  # 101
+    offset: [0.24, 0.35, -0.42]
+    segment_duration_s: 2.0
+  - name: AH1  # 102
+    offset: [0.24, 0.31, -0.42]
+    segment_duration_s: 2.0
+  - name: AI1  # 103
+    offset: [0.22, 0.31, -0.42]
+    segment_duration_s: 2.0
+  - name: AI2  # 104
+    offset: [0.22, 0.35, -0.42]
+    segment_duration_s: 2.0
+  - name: AI1  # 105
+    offset: [0.22, 0.31, -0.42]
+    segment_duration_s: 2.0
+
+  - name: HOME  # 106
+    offset: [0.0, 0.0, 0.0]
+    segment_duration_s: 10.0
+
+pause_behavior:
+  pause_at_indices: [1]
