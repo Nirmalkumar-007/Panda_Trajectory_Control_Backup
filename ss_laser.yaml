@@ -1,0 +1,79 @@
+safety:
+  require_home_on_start: true
+  max_joint_error_rad: 0.05         #Start-up joint error
+motion:
+  default_segment_duration_s: 15.0  #Time
+  default_s_ddot_max: 0.05          #Acceleration
+  default_control_rate_hz: 100.0    #Control rate - controller update frequency
+stiffness:
+  translational_x: 2400.0
+  translational_y: 2400.0
+  translational_z: 2000.0
+  rotational_x: 90.0
+  rotational_y: 90.0
+  rotational_z: 90.0
+  damping_ratio: 0.9
+  nullspace_stiffness: 3.0
+orientation:
+  tilt_sideways_deg: 0
+  tilt_forward_deg: 0
+  tilt_roll_deg: 0   
+post_tilt:
+  duration_s: 10.0            #Time
+  control_rate_hz: 100.0      #Control rate
+ 
+waypoints:
+  - name: HOME
+    offset: [0.0, 0.0, 0.0]
+
+  - name: A1
+    offset: [0.24, -0.04, -0.184]
+    segment_duration_s: 10.0
+
+  - name: A2
+    offset: [0.24, 0.24, -0.184]
+    segment_duration_s: 85.0
+       
+  - name: HOME
+    offset: [0.0, 0.0, 0.0]
+    segment_duration_s: 10.0
+    
+  - name: A4 #4 
+    offset: [0.108, -0.04, -0.208]
+    segment_duration_s: 10.0
+       
+    post_tilt_sideways_deg: 10.0 #y
+    post_tilt_forward_deg: -38.5  #x
+    post_tilt_roll_deg: 0.0      #z
+    
+   
+  - name: A5 #5 
+    offset: [0.108, 0.24, -0.208]
+    segment_duration_s: 135.0
+  
+  - name: HOME 
+    offset: [0.0, 0.0, 0.0]
+    segment_duration_s: 10.0
+
+pause_behavior:
+  pause_at_indices: [1]
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #settle_thresh_m: 0.001      # settle when position error 
+  #settle_timeout_s: 2.0       # never wait more than 2s
+  #settle_thresh_deg: 1.0      # for orientation settling after tilt
+
